@@ -7,6 +7,9 @@ if [[ $yes == "Y" || $yes == "y" || $yes == "" ]]; then
   pacman -Sy archlinux-keyring
 	pacstrap /mnt base
 	genfstab -p -L /mnt >> /mnt/etc/fstab
+  cd /mnt
+  curl -L -O raw.githubusercontent.com/vektordev/arch-inst/master/10_base.sh
+  chmod +x 10_base.sh
 	arch-chroot /mnt /bin/bash
 else
 	echo "Exiting ..."

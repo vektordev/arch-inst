@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "enter host name"
 read hst
 echo $hst > /etc/hostname
